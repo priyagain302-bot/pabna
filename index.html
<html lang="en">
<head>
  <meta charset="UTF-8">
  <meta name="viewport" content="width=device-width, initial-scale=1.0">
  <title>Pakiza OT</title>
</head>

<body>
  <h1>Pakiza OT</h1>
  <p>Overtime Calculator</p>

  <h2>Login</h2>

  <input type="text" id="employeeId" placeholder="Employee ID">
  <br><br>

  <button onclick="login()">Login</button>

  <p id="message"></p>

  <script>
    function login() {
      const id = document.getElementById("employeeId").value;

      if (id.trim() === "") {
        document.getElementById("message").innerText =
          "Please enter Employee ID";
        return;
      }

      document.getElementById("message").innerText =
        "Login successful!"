@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pakiza OT</title>
+</head>
+
+<body>
+  <h1>Pakiza OT</h1>
+  <p>Overtime Calculator</p>
+
+  <h2>Login</h2>
+
+  <input type="text" id="employeeId" placeholder="Employee ID">
+  <br><br>
+
+  <button onclick="login()">Login</button>
+
+  <p id="message"></p>
+
+  <script>
+    function login() {
+      const id = document.getElementById("employeeId").value;
+
+      if (id.trim() === "") {
+        document.getElementById("message").innerText =
+          "Please enter Employee ID";
+        return;
+      }
+
+      document.getElementById("message").innerText =
+        "Login successful!";
+    }
+  </script>
+</body>
+</html>
